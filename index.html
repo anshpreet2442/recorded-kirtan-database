@@ -41,38 +41,10 @@
 </head>
 <body>
     <div class="watermark">
-        <img src="https://cdn-icons-png.flaticon.com/128/7298/7298924.png" alt="Watermark" width="128" height="128">
+        <img src="https://etus.link/databasekirtanwatermark" alt="Watermark" width="128" height="128">
       <div style="position: relative;">
-    <span id="customContextMenu" style="position: absolute; top: 55px; left: 155px; font-size: 24px; color: white; font-family: Arial, sans-serif; cursor: pointer;">anshpreet.com</span>
-    <div id="contextMenu" style="display: none; position: absolute; top: 0; left: 0; background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
-        <button onclick="window.location.href = 'https://anshpreet.com';">Go to anshpreet.com</button>
-        <button onclick="speakAndRefresh()">This database is managed by anshpreet</button>
-    </div>
-</div>
-
-<script>
-    document.getElementById('customContextMenu').addEventListener('click', function() {
-        var contextMenu = document.getElementById('contextMenu');
-        contextMenu.style.display = 'block';
-
-        // Dismiss context menu when clicking outside of it
-        document.addEventListener('click', function(event) {
-            var isClickInside = contextMenu.contains(event.target) || document.getElementById('customContextMenu') === event.target;
-            if (!isClickInside) {
-                contextMenu.style.display = 'none';
-            }
-        });
-    });
-
-    function speakAndRefresh() {
-        var msg = new SpeechSynthesisUtterance('This database is managed by anshpreet');
-        window.speechSynthesis.speak(msg);
-        
-        setTimeout(function() {
-            window.location.reload();
-        }, 3000);
-    }
-</script>
+<a href="https://anshpreet.com"    <span id="customContextMenu" style="position: absolute; top: 55px; left: 155px; font-size: 24px; color: white; font-family: Arial, sans-serif; cursor: pointer;">anshpreet.com</span>
+  
 
     </div>
     <iframe src="https://etus.link/rcrdkirt" scrolling="auto" id="embeddedPage"></iframe>
