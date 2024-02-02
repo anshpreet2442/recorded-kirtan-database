@@ -34,13 +34,24 @@
         <img src="https://cdn-icons-png.flaticon.com/128/7298/7298924.png" alt="Watermark" width="128" height="128">
         <span style="position: absolute; top: 55px; left: 155px; font-size: 24px; color: white; font-family: Arial, sans-serif;">anshpreet.com</span>
     </div>
-    <iframe src="URL_OF_YOUR_PAGE" scrolling="auto" id="embeddedPage"></iframe>
+    <iframe src="https://etus.link/rcrdkirt" scrolling="auto" id="embeddedPage"></iframe>
 
     <script>
         // Disable left-click events inside the iframe
         document.getElementById('embeddedPage').contentWindow.document.addEventListener('click', function(event) {
             if (event.button === 0) {
                 event.preventDefault();
+            }
+        });
+
+        // Handle clicks on links within the iframe
+        document.getElementById('embeddedPage').contentWindow.document.addEventListener('click', function(event) {
+            var target = event.target;
+            if (target.tagName === 'A') {
+                event.preventDefault(); // Prevent default link behavior
+
+                // Open link within the app
+                window.open(target.href, '_self');
             }
         });
     </script>
